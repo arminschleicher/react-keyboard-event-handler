@@ -14,7 +14,7 @@ export default class KeyboardEventHandler extends React.Component {
   }
 
   componentDidMount() {
-    if (typeof document !== 'undefined') {
+    if (typeof window !== 'undefined' && typeof document !== 'undefined') {
       document.addEventListener('keydown', this.handleKeyboardEvent, false);
       document.addEventListener('keyup', this.handleKeyboardEvent, false);
       document.addEventListener('keypress', this.handleKeyboardEvent, false);
@@ -27,7 +27,7 @@ export default class KeyboardEventHandler extends React.Component {
   }
 
   componentWillUnmount() {
-    if (typeof document !== 'undefined') {
+    if (typeof window !== 'undefined' && typeof document !== 'undefined') {
       document.removeEventListener('keydown', this.handleKeyboardEvent, false);
       document.removeEventListener('keyup', this.handleKeyboardEvent, false);
       document.removeEventListener('keypress', this.handleKeyboardEvent, false);
@@ -102,8 +102,11 @@ export default class KeyboardEventHandler extends React.Component {
   }
 
   render() {
+    if( typeof window === 'undefined' || typeof document === 'undefined') {
+      return null;
+    }
     const { children } = this.props;
-    const passProps = Object.assign({}, this.props)
+    const passProps = Object.assign({}, this.props);
     for (const key of Object.keys(KeyboardEventHandler.propTypes)) {
       delete passProps[key]
     }
