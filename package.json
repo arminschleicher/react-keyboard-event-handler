@@ -1,6 +1,6 @@
 {
-  "name": "react-keyboard-event-handler",
-  "version": "1.5.4",
+  "name": "react-keyboard-event-handler-ssr",
+  "version": "1.0.0",
   "description": "A React component for handling keyboard events.",
   "main": "lib/react-keyboard-event-handler.js",
   "scripts": {
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/linsight/react-keyboard-event-handler.git"
+    "url": "https://github.com/arminschleicher/react-keyboard-event-handler"
   },
   "keywords": [
     "react",
@@ -27,9 +27,9 @@
   "author": "David Lin",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/linsight/react-keyboard-event-handler/issues"
+    "url": "https://github.com/arminschleicher/react-keyboard-event-handler"
   },
-  "homepage": "https://github.com/linsight/react-keyboard-event-handler",
+  "homepage": "https://github.com/arminschleicher/react-keyboard-event-handler",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
@@ -57,7 +57,7 @@
     "sinon": "^4.5.0",
     "uglifyjs-webpack-plugin": "^2.0.1",
     "webpack": "^4.25.1",
-    "webpack-cli": "^3.1.2",
+    "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.7.1",
     "yargs": "^11.1.0"
   },
